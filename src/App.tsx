@@ -1,7 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import './App.css';
-
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Profile from './pages/profile/Profile';
@@ -10,7 +8,7 @@ import Register from './pages/register/Register';
 import ListVolunteers from './pages/listVolunteers/ListVolunteers';
 import PasswordRecovery from './pages/passwordRecovery/PasswordRecovery';
 
-function App() {
+export default function App() {
 
   return (
     <BrowserRouter>
@@ -30,5 +28,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
