@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Content = styled.div`
 
-  margin-top: 40px;
-
   ul {
     list-style: none;
   }
