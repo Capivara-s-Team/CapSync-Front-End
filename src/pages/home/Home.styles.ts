@@ -22,6 +22,7 @@ export const Title = styled.h1`
 `;
 
 export const Content = styled.p`
+    padding: 10px;
     width: 70%;
     margin-top: 15px;
     color: #5C5A5A;
