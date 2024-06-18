@@ -1,30 +1,33 @@
-import imageLogo from '../../assets/svg/logo_bichinhos.svg';
+import mainLogo from "../../assets/svg/main_logo.svg";
 
-import { Container, Content, Logo, Title } from './Home.styles';
+import { Container, MainContainer, Content, Logo, Title } from "./Home.styles";
 
-import Line from '../../components/line/Line';
-import NavbarMenu from '../../components/navbarMenu/NavbarMenu';
-import Footer from '../../components/footer/Footer';
+import NavbarMenu from "../../components/navbarMenu/NavbarMenu";
+import { GlobalStyle } from "../../styles/globalStyles";
+import Footer from "../../components/footer/Footer";
 
-interface HomeProps {
-
-}
-
-export default function Home(props : HomeProps){
-
-    return (
-        <Container>
-            <NavbarMenu />
-            <Logo src={imageLogo} alt="Logo da Bichinhos" />
-            <Line />
-            <Title> Bem vindos à <br /> Bichinhos da TI.</Title>
-            <Content>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem libero mollitia enim.
-                Voluptas, cum velit. Assumenda aut, repellendus totam sunt magnam consequatur culpa incidunt
-                animi atque sit quae corrupti quia?
-            </Content>
-            <Line />
-            <Footer />
-        </Container>
-    );
+export default function Home() {
+  return (
+    <Container>
+      <GlobalStyle />
+      <NavbarMenu />
+      <MainContainer>
+        <div className="Box-logo">
+          <Logo src={mainLogo} alt="Logo da Bichinhos" />
+        </div>
+        <div>
+          <Content>
+            <Title>
+              Bem vindos à <br /> <strong>Bichinhos</strong> da TI.
+            </Title>
+            <p>
+              Comunidade dedicada ao aprendizado prático e gratuito, onde indivíduos com diversas experiências, desde líderes tecnológicos até iniciantes na área de tecnologia, estão prontos para
+              oferecer auxílio.
+            </p>
+          </Content>
+          <Footer />
+        </div>
+      </MainContainer>
+    </Container>
+  );
 }

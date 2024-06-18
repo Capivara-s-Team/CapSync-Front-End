@@ -1,17 +1,41 @@
-import coruja from '../../assets/svg/icon_coruja.svg';
-import hamburguer from '../../assets/svg/icon_hamburguer.svg';
+import { useEffect, useState } from "react";
+import navbarLogo from "../../assets/svg/navbar_logo.svg";
+import nightIcon from "../../assets/svg/night_icon.svg";
+import dayIcon from "../../assets/svg/day_icon.svg";
 
-import { Navbar } from './NavbarMenu.styles';
+import { Navbar } from "./NavbarMenu.styles";
+import { Link } from "react-router-dom";
 
-interface NavbarMenuProps {
+export default function NavbarMenu() {
+  const [theme, setTheme] = useState("light");
 
-}
+  useEffect(() => {
+    document.body.className = `theme-${theme}`;
+  }, [theme]);
 
-export default function NavbarMenu(props : NavbarMenuProps){
-    return (
-      <Navbar>
-        <img src={coruja} alt='Icon de uma coruja' />
-        <img src={hamburguer} alt='Icon de hamburguer' />
-      </Navbar>
-    );
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+  return (
+    <Navbar>
+      <div className="Box-logo">
+        <img src={navbarLogo} alt="" />
+        <span>Bichinhos da TI</span>
+      </div>
+      <div className="navbar-icons">
+        <span>
+          <Link to={"/"}>Home</Link>
+        </span>
+        <span>
+          <Link to={"/login"}>Login</Link>
+        </span>
+        <span>
+          <Link to={"/login"}>Cadastre-se</Link>
+        </span>
+        <div>
+          <button onClick={toggleTheme}>{theme === "light" ? <img src={dayIcon} alt="" /> : <img src={nightIcon} alt="" />}</button>
+        </div>
+      </div>
+    </Navbar>
+  );
 }
