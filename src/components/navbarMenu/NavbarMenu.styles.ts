@@ -1,11 +1,56 @@
 import styled from "styled-components";
 
 export const Navbar = styled.div`
-    height: 50px;
-    width: 100vh;
+    height: 100px;
+    width: 100vw;
     padding: 5px;
-    margin-top: 20px;
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    background-color: #F86B01;
+
+    .Box-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+    .navbar-icons{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+
+            &:hover {
+                color: #000;
+                transform: scale(1.075);
+            }
+        }
+
+        img{
+            width: 30px;
+            height: 30px;
+        }
+
+        button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            /* &:hover {
+                transform: scale(1.1);
+            } */
+        }
+    }
+
 `;
