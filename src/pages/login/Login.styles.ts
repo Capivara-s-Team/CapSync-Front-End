@@ -52,15 +52,7 @@ input{
     background-color: red;
 
     }
-
-button{
-      width:280px;
-      border: 0;
-      padding: 16px;
-      border-radius: 8px;
-      background-color: #FDD3B3;
-    }
-    `;
+  `;
 
 export const LoginContent = styled.div`
   display: flex;

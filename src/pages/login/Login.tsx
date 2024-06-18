@@ -4,6 +4,7 @@ import { GlobalStyle } from "../../styles/globalStyles";
 import night_icon from "../../assets/svg/night_icon.svg";
 import mainLogo from "../../assets/svg/main_logo.svg";
 import Navbar from "../../components/navbarMenu/NavbarMenu";
+import Button from "../../components/button/Button";
 
 export function Login() {
   return (
@@ -31,7 +32,13 @@ export function Login() {
               Senha
               <input id="password-input" type="text" placeholder="No mínimo 6 caracteres" />
             </span>
-            <button>Login</button>
+
+            <Button
+              text="Login" 
+              color="#fa6c00" 
+              textColor="#2f2f2f" 
+              width={17.5} />
+             
             <a href="">Criar conta</a>
             <a href="">Esqueceu sua senha?</a>
           </LoginContent>
