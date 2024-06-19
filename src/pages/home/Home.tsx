@@ -20,7 +20,7 @@ export default function Home() {
             <Title>
               Bem vindos à <br /> <strong>Bichinhos</strong> da TI.
             </Title>
-            <p>
+            <p className="second-title">
               Comunidade dedicada ao aprendizado prático e gratuito, onde indivíduos com diversas experiências, desde líderes tecnológicos até iniciantes na área de tecnologia, estão prontos para
               oferecer auxílio.
             </p>

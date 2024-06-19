@@ -18,10 +18,12 @@ export const Title = styled.h1`
     font-size: 64px;
     font-weight: bold;
 
+
     strong {
      background: linear-gradient(#DF6001, #E5B088);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     }
 `;
