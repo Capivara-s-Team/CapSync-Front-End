@@ -8,6 +8,7 @@ export const Container = styled.div`
   height: 100vh;
   width: 100vw;
 
+
   `;
 
 export const Content = styled.div`
@@ -36,16 +37,9 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 gap: 24px;
-height: 80%;
+height: 90%;
 min-width: 520px;
 border-radius: 30px;
-
-input{
-  display: flex;
-  width:280px;
-  height: 40px ;
-  border: 0;
-  }
 
   @media screen and (max-width: 768px){
     display: none;
@@ -83,12 +77,6 @@ export const LoginContent = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
-    }
-
-    input{
-      min-width: 280px;
-      border-radius: 8px;
-      padding: 24px;
     }
 
     a{
