@@ -5,6 +5,7 @@ import night_icon from "../../assets/svg/night_icon.svg";
 import mainLogo from "../../assets/svg/main_logo.svg";
 import Navbar from "../../components/navbarMenu/NavbarMenu";
 import Button from "../../components/button/Button";
+import InputField from "../../components/inputField/InputField";
 
 export function Login() {
   return (
@@ -24,14 +25,18 @@ export function Login() {
             <p className="login-text">Faça seu login</p>
 
             <p id="border">&nbsp;</p>
-            <span>
-              Email
-              <input id="email-input" type="text" placeholder="exemplo@exemplo.com.br" />
-            </span>
-            <span>
-              Senha
-              <input id="password-input" type="text" placeholder="No mínimo 6 caracteres" />
-            </span>
+            
+            <InputField 
+              id="email-input" 
+              type="text" 
+              label="Email" 
+              placeHolder="exemplo@exemplo.com.br" />
+           
+            <InputField 
+              id="password-input" 
+              type="text" 
+              label="Senha" 
+              placeHolder="No mínimo 6 caracteres" />
 
             <Button
               text="Login" 
