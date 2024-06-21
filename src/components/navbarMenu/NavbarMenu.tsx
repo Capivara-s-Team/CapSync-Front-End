@@ -30,7 +30,7 @@ export default function NavbarMenu() {
           <Link to={"/login"}>Login</Link>
         </span>
         <span>
-          <Link to={"/login"}>Cadastre-se</Link>
+          <Link to={"/singup1"}>Cadastre-se</Link>
         </span>
         <div>
           <button onClick={toggleTheme}>{theme === "light" ? <img src={dayIcon} alt="" /> : <img src={nightIcon} alt="" />}</button>
