@@ -7,7 +7,7 @@ export const ContentLogo = styled.div`
   align-items: center;
   justify-content: center;
 
-  margin-top: 2.4rem;
+  margin-top: 1.5rem;
 
   gap: 1.6rem;
 

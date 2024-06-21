@@ -1,9 +1,9 @@
 import LogoBichinhos from "../../components/logoBichinhos/LogoBichinhos";
 
-import { useNavigate } from 'react-router-dom';
 import { InputField } from "../../components/inputField/InputField";
 import { ContentButtons, ContentInputs } from "./SingUp.styles";
 import Button from "../../components/button/Button";
+import NavbarMenu from "../../components/navbarMenu/NavbarMenu";
 
 export default function SingUp1(){
 
@@ -42,8 +42,8 @@ export default function SingUp1(){
 
     return (
        <div>
+        <NavbarMenu />
         <LogoBichinhos />
-
         <ContentInputs>
             <h3>Crie sua conta</h3>
 
