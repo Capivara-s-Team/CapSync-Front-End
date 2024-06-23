@@ -1,6 +1,6 @@
 import mainLogo from "../../assets/svg/main_logo.svg";
 
-import { Container, MainContainer, Content, Logo, Title } from "./Home.styles";
+import { Container, MainContainer, Content_container, Content, Logo, Title } from "./Home.styles";
 
 import NavbarMenu from "../../components/navbarMenu/NavbarMenu";
 import { GlobalStyle } from "../../styles/globalStyles";
@@ -15,7 +15,7 @@ export default function Home() {
         <div className="Box-logo">
           <Logo src={mainLogo} alt="Logo da Bichinhos" />
         </div>
-        <div>
+        <Content_container>
           <Content>
             <Title>
               Bem vindos à <br /> <strong>Bichinhos</strong> da TI.
@@ -26,7 +26,7 @@ export default function Home() {
             </p>
           </Content>
           <Footer />
-        </div>
+        </Content_container>
       </MainContainer>
     </Container>
   );

@@ -28,16 +28,24 @@ export const Title = styled.h1`
     }
 `;
 
+export const Content_container = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    `;
+
 export const Content = styled.p`
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 64px;
     align-items: center;
+    justify-content: flex-end;
     text-align: justify;
     color: #5C5A5A;
-    font-size: 14px;
+    gap: 56px;
     width: 50vw;
+    height: 60%;
 
     p{
     width: 320px;
