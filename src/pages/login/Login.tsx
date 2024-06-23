@@ -5,6 +5,8 @@ import night_icon from "../../assets/svg/night_icon.svg";
 import mainLogo from "../../assets/svg/main_logo.svg";
 import Navbar from "../../components/navbarMenu/NavbarMenu";
 import Button from "../../components/button/Button";
+
+import { Link } from "react-router-dom";
 import { InputField } from "../../components/inputField/InputField";
 
 export function Login() {
@@ -25,12 +27,14 @@ export function Login() {
             <p className="login-text">Faça seu login</p>
 
             <p id="border">&nbsp;</p>
-            <InputField id="email-input" type="text" label="Email" placeHolder="exemplo@exemplo.com.br" input="Email" />
-            <InputField id="password-input" type="text" label="Senha" placeHolder="No mínimo 6 caracteres" input="Senha" />
+            <InputField id="email-input" type="email" label="Email" placeHolder="exemplo@exemplo.com.br" icon="Email" />
+            <InputField id="password-input" type="password" label="Senha" placeHolder="No mínimo 6 caracteres" icon="Password" />
 
             <Button text="Login" color="#fa6c00" textColor="#2f2f2f" width={17.5} />
 
-            <a href="">Criar conta</a>
+            <a href="">
+              <Link to={"/recover-password"}>Criar conta</Link>
+            </a>
             <a href="">Esqueceu sua senha?</a>
           </LoginContent>
         </LoginContainer>

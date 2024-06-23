@@ -14,7 +14,7 @@ export const Span = styled.span`
 `;
 
 export const InputContainer = styled.div`
-  background-color: rgba(68, 68, 68, 0.14);
+  background-color: #E4E4E4;
   display: flex;
   align-items: center;
   padding: 8px;
@@ -43,4 +43,3 @@ export const IconWrapper = styled.div`
   align-items: center;
   font-size: 20px;
 `;
-
