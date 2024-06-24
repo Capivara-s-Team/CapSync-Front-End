@@ -13,7 +13,8 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 85%;
+  //height: 85%;
+  padding-top: 48px;
   width: 100%;
 `;
 
@@ -23,26 +24,16 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-gap: 24px;
-height: 90%;
+
+justify-content: space-evenly;
+gap: 28px;
+
+//height: 90%;
+padding: 56px 70px 48px;
 min-width: 520px;
 border-radius: 30px;
 
-  @media screen and (max-width: 768px){
-    display: none;
-    background-color: red;
-
-    }
-  `;
-
-export const LoginContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 28px;
-
-  .main-text{
+.main-text{
     font-size: 36px;
     color: #000;
   }
@@ -71,4 +62,9 @@ export const LoginContent = styled.div`
       color: #FFF;
     }
 
-`;
+  @media screen and (max-width: 768px){
+    display: none;
+    background-color: red;
+
+    }
+  `;

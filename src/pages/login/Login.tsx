@@ -1,4 +1,4 @@
-import { Container, Content, LoginContainer, LoginContent } from "./Login.styles";
+import { Container, Content, LoginContainer } from "./Login.styles";
 import { GlobalStyle } from "../../styles/globalStyles";
 
 import mainLogo from "../../assets/svg/main_logo.svg";
@@ -14,11 +14,10 @@ export function Login() {
       <GlobalStyle />
       <Navbar />
       <Content>
-        <div>
+        <div className="Box-logo">
           <img className="center_logo" src={mainLogo} alt="Center Logo" />
         </div>
         <LoginContainer>
-          <LoginContent>
             <p className="main-text">Bichinhos da TI</p>
             <p className="login-text">Faça seu login</p>
 
@@ -26,7 +25,7 @@ export function Login() {
             <InputField id="email-input" type="email" label="Email" placeHolder="exemplo@exemplo.com.br" icon="Email" />
             <InputField id="password-input" type="password" label="Senha" placeHolder="No mínimo 6 caracteres" icon="Password" />
 
-            <Button text="Login" color="#fa6c00" textColor="#2f2f2f" width={17.5} />
+            <Button text="Login" color="#fa6c00" textColor="#2f2f2f" width={100} />
 
             <a href="">
               <Link to={"/singup1"}>Criar conta</Link>
@@ -34,7 +33,6 @@ export function Login() {
             <a href="">
               <Link to={"/recovery"}>Esqueceu sua senha?</Link>
             </a>
-          </LoginContent>
         </LoginContainer>
       </Content>
     </Container>

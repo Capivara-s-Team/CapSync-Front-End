@@ -6,14 +6,20 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
     width: 100vw;
+
+    .footer {
+        align-self: end;
+        margin-right: 168px;
+        padding-bottom: 30px;
+    }
 `;
 
 export const Logo = styled.img`
     height: auto;
-    margin-top: 20px;
+    //margin-top: 20px;
 `;
 export const Title = styled.h1`
-    width: 70%;
+    //width: 70%;
     text-align: center;
     font-size: 64px;
     font-weight: bold;
@@ -29,14 +35,14 @@ export const Title = styled.h1`
 `;
 
 export const Content_container = styled.div`
-    height: 100%;
+    //height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    `;
+`;
 
-export const Content = styled.p`
-    padding: 10px;
+export const Content = styled.div`
+    //padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,9 +51,8 @@ export const Content = styled.p`
     color: #5C5A5A;
     gap: 56px;
     width: 50vw;
-    height: 60%;
-
-    p{
+    
+    p {
     width: 320px;
     }
 `;
@@ -56,7 +61,8 @@ export const MainContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 64px;
+    gap: 24px;
+    padding: 98px 58px 24px 116px;
     height: 100%;
     width: 100vw;
 `;
