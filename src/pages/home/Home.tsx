@@ -15,6 +15,7 @@ export default function Home() {
         <div className="Box-logo">
           <Logo src={mainLogo} alt="Logo da Bichinhos" />
         </div>
+
         <Content>
           <h1>
             Bem vindos à <br /> <span>Bichinhos</span> da TI

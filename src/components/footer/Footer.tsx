@@ -7,6 +7,7 @@ export default function Footer() {
         <li className="icon-content">
           <a
             href="https://linkedin.com/"
+            target="_blank"
             aria-label="LinkedIn"
             data-social="linkedin">
             <div className="filled"></div>
