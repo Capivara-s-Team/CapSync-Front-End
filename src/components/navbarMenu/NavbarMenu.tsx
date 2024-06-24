@@ -38,30 +38,11 @@ export default function NavbarMenu() {
         <div>
           <button onClick={toggleTheme}>
             {theme === "light" ? (
-              <img src={dayIcon} alt="" />
+              <img src={dayIcon} alt="Icone de Lith mode" />
             ) : (
               <img src={nightIcon} alt="Icone do darkMode" />
             )}
           </button>
-        </div>
-      </div>
-
-      <div className="navbar-mobile">
-        <button onClick={toggleTheme}>
-          {theme === "light" ? (
-            <img src={dayIcon} alt="" />
-          ) : (
-            <img src={nightIcon} alt="Icone do darkMode" />
-          )}
-        </button>
-
-        <div id="menuToggle">
-          <input id="checkbox" type="checkbox" />
-          <label className="toggle" htmlFor="checkbox">
-            <div className="bar bar--top"></div>
-            <div className="bar bar--middle"></div>
-            <div className="bar bar--bottom"></div>
-          </label>
         </div>
       </div>
     </Navbar>
