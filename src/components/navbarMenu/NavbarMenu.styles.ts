@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Navbar = styled.div`
-  padding: 5px;
+  padding: 18px 32px;
   display: flex;
   justify-content: space-between;
 
@@ -121,6 +121,7 @@ export const Navbar = styled.div`
     }
 
     .navbar-icons {
+      margin-left: 20px;
       display: flex;
       align-items: center;
       gap: 32px;
