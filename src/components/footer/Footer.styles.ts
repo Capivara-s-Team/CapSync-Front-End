@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-
   ul {
     list-style: none;
   }
@@ -43,7 +42,9 @@ export const Content = styled.div`
     height: 50px;
     border-radius: 50%;
     color: #4d4d4d;
-    background-color: #fff;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #4d4d4d;
     transition: all 0.3s ease-in-out;
   }
   .example-2 .icon-content a:hover {
@@ -97,5 +98,4 @@ export const Content = styled.div`
   .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
     background-color: #ff0000;
   }
-
 `;

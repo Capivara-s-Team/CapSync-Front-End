@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Span = styled.span`
-  color: #79797B;
+  color: #79797b;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -14,7 +14,7 @@ export const Span = styled.span`
 `;
 
 export const InputContainer = styled.div`
-  background-color: rgba(68, 68, 68, 0.14);
+  background-color: #e4e4e4;
   display: flex;
   align-items: center;
   padding: 8px;
@@ -43,4 +43,3 @@ export const IconWrapper = styled.div`
   align-items: center;
   font-size: 20px;
 `;
-
