@@ -1,14 +1,13 @@
-import { Container, Content, ThemeIcon } from "./Login.styles";
+import { Container, Content } from "./Login.styles";
 import { GlobalStyle } from "../../styles/globalStyles";
 
-import night_icon from "../../assets/svg/night_icon.svg";
 import mainLogo from "../../assets/svg/main_logo.svg";
 import Navbar from "../../components/navbarMenu/NavbarMenu";
 import Button from "../../components/button/Button";
 import { InputField } from "../../components/inputField/InputField";
 
 import { Link } from "react-router-dom";
-import CardForms from "../../components/cardforms/CardForms";
+import CardForms from "../../components/cardForms/CardForms";
 
 export function Login() {
   return (
@@ -16,9 +15,6 @@ export function Login() {
       <GlobalStyle />
       <Navbar />
       <Content>
-        <ThemeIcon>
-          <img src={night_icon} alt="Icon de modo noturno" />
-        </ThemeIcon>
         <div>
           <img className="center_logo" src={mainLogo} alt="Center Logo" />
         </div>

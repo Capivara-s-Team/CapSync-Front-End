@@ -1,51 +1,62 @@
-import LogoBichinhos from "../../components/logoBichinhos/LogoBichinhos";
+import { Container, Content } from "./SingUp2.styles";
+import { GlobalStyle } from "../../styles/globalStyles";
+
+import mainLogo from "../../assets/svg/main_logo.svg";
 
 import { InputField } from "../../components/inputField/InputField";
-import { ContentButtons, ContentInputs } from "./SingUp.styles";
+import { ContentButtons, ContentInputs } from "./SingUp2.styles";
 import Button from "../../components/button/Button";
-import NavbarMenu from "../../components/navbarMenu/NavbarMenu";
+import Navbar from "../../components/navbarMenu/NavbarMenu";
+import CardForms from "../../components/cardForms/CardForms";
 
-export default function SingUp1() {
+import { Link } from "react-router-dom";
+
+export default function SingUp2() {
   const inputFields = [
     {
       label: "Nome*",
       placeholder: "Nome",
       type: "text",
-      icon: "User" as "User",
+      icon: "User" as const,
     },
     {
       label: "Sobrenome*",
       placeholder: "Sobrenome",
       type: "text",
-      icon: "User" as "User",
+      icon: "User" as const,
     },
     {
       label: "Email*",
       placeholder: "exemplo@exemplo.com.br",
       type: "email",
-      icon: "Email" as "Email",
+      icon: "Email" as const,
     },
     {
       label: "Senha*",
       placeholder: "No mínimo 6 caracteres",
       type: "password",
-      icon: "Password" as "Password",
+      icon: "Password" as const,
     },
     {
       label: "Confirme sua senha*",
       placeholder: "Confirme sua senha",
       type: "password",
-      icon: "Password" as "Password",
+      icon: "Password" as const,
     },
   ];
 
   return (
-    <div>
-      <NavbarMenu />
-      <LogoBichinhos />
-      <ContentInputs>
-        <h3>Crie sua conta</h3>
+    <Container>
+      <GlobalStyle />
+      <Navbar />
+      <Content>
+        <div>
+          <img className="center_logo" src={mainLogo} alt="Center Logo" />
+        </div>
 
+      <CardForms text="Crie sua conta" className="teste">
+      
+      <ContentInputs>
         {inputFields.map((field) => (
           <InputField
             key={field.label}
@@ -58,15 +69,21 @@ export default function SingUp1() {
       </ContentInputs>
 
       <ContentButtons>
+        <Link to={"/login"}>
         <Button
           text="Voltar"
           color="rgba(68, 68, 68, 0.14)"
           textColor="#F86B01"
           width={15}
-        />
+        /></Link>
 
+        <Link to={"/login"}>
         <Button text="Próximo" color="#F86B01" textColor="#312E38" width={15} />
+        </Link>
       </ContentButtons>
-    </div>
+
+      </CardForms>
+      </Content>
+    </Container>
   );
 }
