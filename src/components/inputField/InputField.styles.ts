@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const Span = styled.span`
-  color: #79797B;
+  color: #f2f2f2;
   display: flex;
   flex-direction: column;
-  gap: 8px;
   width: 100%;
+
+  margin-top: 14px;
 
   label {
     font-size: 14px;
-    font-weight: bold;
   }
 `;
 
 export const InputContainer = styled.div`
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   display: flex;
   align-items: center;
   padding: 8px;
@@ -38,7 +38,7 @@ export const InputContainer = styled.div`
 
 export const IconWrapper = styled.div`
   color: #666360;
-  margin-right: 8px;
+  margin: 0 2px 0 5px;
   display: flex;
   align-items: center;
   font-size: 20px;
