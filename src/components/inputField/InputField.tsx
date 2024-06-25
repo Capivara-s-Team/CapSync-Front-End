@@ -8,23 +8,10 @@ interface InputFieldProps {
   type: string;
   label: string;
   placeHolder: string;
-  icon?:
-    | "Linkedin"
-    | "Discord"
-    | "Phone"
-    | "Email"
-    | "Password"
-    | "User"
-    | "Search";
+  icon?: "Linkedin" | "Discord" | "Phone" | "Email" | "Password" | "User" | "Search";
 }
 
-export function InputField({
-  id,
-  type,
-  label,
-  placeHolder,
-  icon,
-}: InputFieldProps) {
+export function InputField({ id, type, label, placeHolder, icon }: InputFieldProps) {
   const InputIcon = () => {
     switch (icon) {
       case "Linkedin":
@@ -38,7 +25,7 @@ export function InputField({
       case "Password":
         return <MdOutlineLock />;
       case "User":
-        return <BiUser />;
+        return <BiUser />
       case "Search":
         return <BiSearch />;
       default:

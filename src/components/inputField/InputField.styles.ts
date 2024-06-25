@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Span = styled.span`
-  color: #79797b;
+  color: #79797B;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -14,7 +14,7 @@ export const Span = styled.span`
 `;
 
 export const InputContainer = styled.div`
-  background-color: #e4e4e4;
+  background-color: #E4E4E4;
   display: flex;
   align-items: center;
   padding: 8px;
