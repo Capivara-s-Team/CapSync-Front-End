@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  height: 600px;
+
   background: linear-gradient(180deg, #f86b01 0%, #f8c787 100%);
   display: flex;
   align-items: center;
@@ -8,15 +10,35 @@ export const Container = styled.div`
   flex-direction: column;
 
   justify-content: space-evenly;
-  gap: 28px;
 
   padding: 56px 70px 48px;
-  min-width: 520px;
   border-radius: 30px;
 
-  h1 {
-    font-size: 36px;
-    color: #000;
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    align-items: center;
+
+    h1 {
+      font-size: 36px;
+      color: #000;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+
+      width: 210px;
+      margin: auto;
+
+      text-align: center;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 8px;
+    }
   }
 
   .theme-dark {

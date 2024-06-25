@@ -15,6 +15,20 @@ export const Content = styled.div`
   justify-content: space-evenly;
   height: 85%;
   width: 100%;
+
+  .btns {
+    margin-top: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 `;
 
 export const ThemeIcon = styled.div`
