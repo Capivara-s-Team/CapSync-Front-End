@@ -40,15 +40,17 @@ export function Login() {
               icon="Password"
             />
 
-            <Button
-              text="Login"
-              color="#fa6c00"
-              textColor="#2f2f2f"
-              width={17.5}
-            />
+            <div className="btns">
+              <Button
+                text="Entrar"
+                color="#fa6c00"
+                textColor="#2f2f2f"
+                width={17.5}
+              />
 
-            <Link to={"/singup1"}>Criar conta</Link>
-            <Link to={"/recovery"}>Esqueceu sua senha?</Link>
+              <Link to={"/singup1"}>Criar conta</Link>
+              <Link to={"/recovery"}>Esqueceu sua senha?</Link>
+            </div>
           </div>
         </CardForms>
       </Content>

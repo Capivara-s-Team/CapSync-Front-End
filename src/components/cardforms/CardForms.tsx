@@ -14,8 +14,10 @@ export default function CardForms({
 }: CardFormsProps) {
   return (
     <Container className={className}>
-      <h1>Bichinhos da TI</h1>
-      <p>{text}</p>
+      <div className="title">
+        <h1>Bichinhos da TI</h1>
+        <p>{text}</p>
+      </div>
       {children}
     </Container>
   );
