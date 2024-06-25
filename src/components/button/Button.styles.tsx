@@ -13,6 +13,8 @@ const StyledDiv = styled.button<ContentProps>`
   background-color: ${(props) => props.color};
   color: ${(props) => props.textColor};
 
+  font-weight: bold;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +28,12 @@ const StyledDiv = styled.button<ContentProps>`
   cursor: pointer;
 `;
 
-export const Content = ({ color, textColor, width, children }: ContentProps) => {
+export const Content = ({
+  color,
+  textColor,
+  width,
+  children,
+}: ContentProps) => {
   return (
     <StyledDiv color={color} textColor={textColor} width={width}>
       {children}
