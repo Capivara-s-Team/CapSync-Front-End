@@ -96,7 +96,7 @@ export default function SignUp2() {
           </ContentInputs>
 
           <ContentButtons>
-            <Link to={"/singup1"}>
+            <Link to={"/signup1"}>
               <Button text="Voltar" color="rgba(68, 68, 68, 0.14)" textColor="#F86B01" width={15} />
             </Link>
 

@@ -19,22 +19,11 @@ export default function PasswordRecovery() {
 
         <CardForms text="Recuperação de senha" className="teste">
           <div>
-            <InputField
-              id="password-input"
-              type="email"
-              label="Email"
-              placeHolder="exemplo@exemplo.com.br"
-              icon="Email"
-            />
+            <InputField id="password-input" type="email" label="Email" placeHolder="exemplo@exemplo.com.br" icon="Email" />
             <div className="btns">
-              <Button
-                text="Recuperar a senha"
-                color="#fa6c00"
-                textColor="#2f2f2f"
-                width={17.5}
-              />
+              <Button text="Recuperar a senha" color="#fa6c00" textColor="#2f2f2f" width={17.5} />
 
-              <Link to={"/singup1"}>Criar conta</Link>
+              <Link to={"/signup1"}>Criar conta</Link>
               <Link to={"/login"}>Voltar</Link>
             </div>
           </div>
