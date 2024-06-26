@@ -15,17 +15,14 @@ export default function Home() {
         <div className="Box-logo">
           <Logo src={mainLogo} alt="Logo da Bichinhos" />
         </div>
-
         <Content>
           <h1>
             Bem vindos à <br /> <span>Bichinhos</span> da TI
           </h1>
 
           <p className="second-title">
-            Comunidade dedicada ao aprendizado prático e gratuito, onde
-            indivíduos com diversas experiências, desde líderes tecnológicos até
-            iniciantes na área de tecnologia, estão prontos para oferecer
-            auxílio.
+            Comunidade dedicada ao aprendizado prático e gratuito, onde indivíduos com diversas experiências, desde líderes tecnológicos até iniciantes na área de tecnologia, estão prontos para
+            oferecer auxílio.
           </p>
           <Footer />
         </Content>

@@ -1,29 +1,18 @@
-import { Container, Content } from "./SingUp2.styles";
+import { Container, Content } from "./SignUp2.styles";
 import { GlobalStyle } from "../../styles/globalStyles";
 
 import mainLogo from "../../assets/svg/main_logo.svg";
 
 import { InputField } from "../../components/inputField/InputField";
-import { ContentButtons, ContentInputs } from "./SingUp2.styles";
+import { ContentButtons, ContentInputs } from "./SignUp2.styles";
 import Button from "../../components/button/Button";
 import Navbar from "../../components/navbarMenu/NavbarMenu";
 import CardForms from "../../components/cardForms/CardForms";
 
 import { Link } from "react-router-dom";
 
-export default function SingUp2() {
-  const squadOptions = [
-    "Front-end",
-    "Back end",
-    "Fulls-stack",
-    "Ui/Ux",
-    "Dados",
-    "CyberSecuriry",
-    "Marketing",
-    "Qa",
-    "Games",
-    "Mobile",
-  ];
+export default function SignUp2() {
+  const squadOptions = ["Front-end", "Back end", "Fulls-stack", "Ui/Ux", "Dados", "CyberSecuriry", "Marketing", "Qa", "Games", "Mobile"];
   const voluntariesOptions = ["Mentor", "Voluntário", "Lider"];
   const seniority = ["Junior", "Pleno", "Senior"];
 
@@ -38,49 +27,28 @@ export default function SingUp2() {
 
         <CardForms text="Crie sua conta" className="teste">
           <ContentInputs>
-            <InputField
-              type="text"
-              label="LinkedIn*"
-              placeHolder="LinkedIn"
-              icon="Linkedin"
-            />
+            <InputField type="text" label="LinkedIn*" placeHolder="LinkedIn" icon="Linkedin" />
             <div className="teste">
-              <InputField
-                type="text"
-                label="Discord*"
-                placeHolder="Discord"
-                icon="Discord"
-              />
+              <InputField type="text" label="Discord*" placeHolder="Discord" icon="Discord" />
 
-              <InputField
-                type="number"
-                label="Telefone*"
-                placeHolder="+55"
-                icon="Phone"
-              />
+              <InputField type="number" label="Telefone*" placeHolder="+55" icon="Phone" />
 
               <InputField type="text" label="" placeHolder="(00) 99999-9999" />
             </div>
 
             <div className="question1">
-              <label htmlFor="">
-                Por que você quer fazer parte da equipe Bichinhos da TI?*
-              </label>
+              <label htmlFor="">Por que você quer fazer parte da equipe Bichinhos da TI?*</label>
               <textarea></textarea>
             </div>
 
             <div className="question1">
-              <label htmlFor="">
-                O que significa o trabalho voluntário na sua vida?*
-              </label>
+              <label htmlFor="">O que significa o trabalho voluntário na sua vida?*</label>
               <textarea></textarea>
             </div>
 
             <div className="select-squads">
               <div className="select1">
-                <label htmlFor="">
-                  Em qual squad você gostaria de participar?*
-                </label>
+                <label htmlFor="">Em qual squad você gostaria de participar?*</label>
                 <select name="" id="">
                   {squadOptions.map((value, index) => (
                     <option key={index} value={value}>
@@ -128,23 +96,12 @@ export default function SingUp2() {
           </ContentInputs>
 
           <ContentButtons>
-            <Link to={"/login"}>
-              <Button
-                text="Voltar"
-                color="rgba(68, 68, 68, 0.14)"
-                textColor="#F86B01"
-                width={15}
-              />
+            <Link to={"/singup1"}>
+              <Button text="Voltar" color="rgba(68, 68, 68, 0.14)" textColor="#F86B01" width={15} />
             </Link>
 
-            <Link to={"/singup3"}>
-              <Button
-                text="Próximo"
-                color="#F86B01"
-                textColor="#312E38"
-                width={15}
-                icon={true}
-              />
+            <Link to={"/signup3"}>
+              <Button text="Próximo" color="#F86B01" textColor="#312E38" width={15} icon={true} />
             </Link>
           </ContentButtons>
         </CardForms>
