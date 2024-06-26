@@ -55,20 +55,36 @@ export default function SignUp1() {
         </div>
 
         <CardForms text="Crie sua conta" className="teste">
-          {" "}
           {/* Passar a class de darkMode no className */}
           <ContentInputs>
             {inputFields.map((field) => (
-              <InputField key={field.label} label={field.label} placeHolder={field.placeholder} type={field.type} icon={field.icon} />
+              <InputField
+                key={field.label}
+                label={field.label}
+                placeHolder={field.placeholder}
+                type={field.type}
+                icon={field.icon}
+              />
             ))}
           </ContentInputs>
           <ContentButtons>
-            <Link to={"/signup1"}>
-              <Button text="Voltar" color="rgba(68, 68, 68, 0.14)" textColor="#F86B01" width={15} />
+            <Link to={"/login"}>
+              <Button
+                text="Voltar"
+                color="rgba(68, 68, 68, 0.14)"
+                textColor="#F86B01"
+                width={15}
+              />
             </Link>
 
             <Link to={"/signup2"}>
-              <Button text="Próximo" color="#F86B01" textColor="#312E38" width={15} icon={true} />
+              <Button
+                text="Próximo"
+                color="#F86B01"
+                textColor="#312E38"
+                width={15}
+                icon={true}
+              />
             </Link>
           </ContentButtons>
         </CardForms>

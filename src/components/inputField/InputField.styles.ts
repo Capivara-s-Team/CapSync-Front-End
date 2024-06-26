@@ -14,7 +14,6 @@ export const Span = styled.span`
   flex-direction: column;
   width: 100%;
 
-  margin-top: 14px;
   gap: 8px;
 
   label {

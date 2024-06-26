@@ -6,15 +6,23 @@ interface ButtonProps {
   color: string;
   textColor: string;
   width: number;
+  type?: string;
   icon?: boolean;
 }
 
-export default function Button({ text, color, textColor, width, icon }: ButtonProps) {
+export default function Button({
+  text,
+  color,
+  textColor,
+  width,
+  type,
+  icon,
+}: ButtonProps) {
   return (
-    <Content color={color} textColor={textColor} width={width}>
+    <Content color={color} textColor={textColor} width={width} type={type}>
       {text}
       {/* Deixe icon=true para aparecer o icon de seta */}
-      {icon ? <FaArrowRight />  : undefined }
+      {icon ? <FaArrowRight /> : undefined}
     </Content>
   );
 }

@@ -17,6 +17,12 @@ export const Content = styled.div`
   height: 100%;
   padding: 40px 0;
 
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .btns {
     margin-top: 1.4rem;
 
