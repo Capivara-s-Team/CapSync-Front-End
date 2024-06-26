@@ -17,31 +17,31 @@ export default function SingUp1() {
       label: "Nome*",
       placeholder: "Nome",
       type: "text",
-      icon: "User" as "User",
+      icon: "User" as const,
     },
     {
       label: "Sobrenome*",
       placeholder: "Sobrenome",
       type: "text",
-      icon: "User" as "User",
+      icon: "User" as const,
     },
     {
       label: "Email*",
       placeholder: "exemplo@exemplo.com.br",
       type: "email",
-      icon: "Email" as "Email",
+      icon: "Email" as const,
     },
     {
       label: "Senha*",
       placeholder: "No mínimo 6 caracteres",
       type: "password",
-      icon: "Password" as "Password",
+      icon: "Password" as const,
     },
     {
       label: "Confirme sua senha*",
       placeholder: "Confirme sua senha",
       type: "password",
-      icon: "Password" as "Password",
+      icon: "Password" as const,
     },
   ];
 
@@ -54,8 +54,8 @@ export default function SingUp1() {
           <img className="center_logo" src={mainLogo} alt="Center Logo" />
         </div>
 
-      <CardForms text="Crie sua conta" className="teste">
-      
+      <CardForms text="Crie sua conta" className="teste"> {/* Passar a class de darkMode no className */}
+        
       <ContentInputs>
         {inputFields.map((field) => (
           <InputField
@@ -70,15 +70,21 @@ export default function SingUp1() {
 
       <ContentButtons>
         <Link to={"/login"}>
-        <Button
-          text="Voltar"
-          color="rgba(68, 68, 68, 0.14)"
-          textColor="#F86B01"
-          width={15}
-        /></Link>
+          <Button
+            text="Voltar"
+            color="rgba(68, 68, 68, 0.14)"
+            textColor="#F86B01"
+            width={15}
+          />
+        </Link>
 
-        <Link to={"/signup2"}>
-        <Button text="Próximo" color="#F86B01" textColor="#312E38" width={15} />
+        <Link to={"/singup2"}>
+          <Button 
+            text="Próximo" 
+            color="#F86B01" 
+            textColor="#312E38" 
+            width={15} 
+            icon={true} />
         </Link>
       </ContentButtons>
 

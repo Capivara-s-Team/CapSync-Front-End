@@ -18,6 +18,7 @@ const StyledDiv = styled.button<ContentProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: .4rem;
 
   padding: 1rem;
   border: none;

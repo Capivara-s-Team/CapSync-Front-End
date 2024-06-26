@@ -7,11 +7,12 @@ interface InputFieldProps {
   id?: string;
   type: string;
   label: string;
-  placeHolder: string;
+  placeHolder?: string;
+  value?: string[];
   icon?: "Linkedin" | "Discord" | "Phone" | "Email" | "Password" | "User" | "Search";
 }
 
-export function InputField({ id, type, label, placeHolder, icon }: InputFieldProps) {
+export function InputField({ id, type, label, placeHolder, icon, value }: InputFieldProps) {
   const InputIcon = () => {
     switch (icon) {
       case "Linkedin":
@@ -38,7 +39,7 @@ export function InputField({ id, type, label, placeHolder, icon }: InputFieldPro
       {label}
       <InputContainer>
         <IconWrapper>{InputIcon()}</IconWrapper>
-        <input id={id} type={type} placeholder={placeHolder} />
+        <input id={id} type={type} placeholder={placeHolder} value={value ? value : undefined} />
       </InputContainer>
     </Span>
   );

@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+// interface ContentProps {
+//   width: number;
+// }
+
+// export const Content = (ContentProps) => {
+
+// }
+
 export const Span = styled.span`
   color: #f2f2f2;
   display: flex;
@@ -43,3 +51,4 @@ export const IconWrapper = styled.div`
   align-items: center;
   font-size: 20px;
 `;
+

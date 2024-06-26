@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    body {
+    body, textarea {
         font-family: 'Roboto', sans-serif;
         background-color: #f2f2f2;
         color: #333;
