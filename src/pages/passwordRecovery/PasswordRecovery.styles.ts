@@ -14,6 +14,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-evenly;
   width: 100vw;
+  height: 100%;
   padding: 40px 0;
 
   .btns {

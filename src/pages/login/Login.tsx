@@ -22,30 +22,13 @@ export function Login() {
 
         <CardForms text="Faça seu login" className="teste">
           <div>
-            <InputField
-              id="email-input"
-              type="text"
-              label="Email"
-              placeHolder="exemplo@exemplo.com.br"
-              icon="Email"
-            />
-            <InputField
-              id="password-input"
-              type="text"
-              label="Senha"
-              placeHolder="No mínimo 6 caracteres"
-              icon="Password"
-            />
+            <InputField id="email-input" type="text" label="Email" placeHolder="exemplo@exemplo.com.br" icon="Email" />
+            <InputField id="password-input" type="text" label="Senha" placeHolder="No mínimo 6 caracteres" icon="Password" />
 
             <div className="btns">
-              <Button
-                text="Entrar"
-                color="#fa6c00"
-                textColor="#2f2f2f"
-                width={17.5}
-              />
+              <Button text="Entrar" color="#fa6c00" textColor="#2f2f2f" width={17.5} />
 
-              <Link to={"/singup1"}>Criar conta</Link>
+              <Link to={"/signup1"}>Criar conta</Link>
               <Link to={"/recovery"}>Esqueceu sua senha?</Link>
             </div>
           </div>

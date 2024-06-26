@@ -15,6 +15,7 @@ export const Span = styled.span`
   width: 100%;
 
   margin-top: 14px;
+  gap: 8px;
 
   label {
     font-size: 14px;
@@ -51,4 +52,3 @@ export const IconWrapper = styled.div`
   align-items: center;
   font-size: 20px;
 `;
-

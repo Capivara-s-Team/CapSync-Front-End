@@ -6,8 +6,8 @@ import Profile from "./pages/profile/Profile";
 import Error from "./pages/error/ErrorPage";
 import ListVolunteers from "./pages/listVolunteers/ListVolunteers";
 import PasswordRecovery from "./pages/passwordRecovery/PasswordRecovery";
-import SingUp1 from "./pages/singUp1/SingUp1";
-import SingUp2 from "./pages/singUp2/SingUp2";
+import SignUp1 from "./pages/signUp1/SignUp1";
+import SignUp2 from "./pages/signUp2/SignUp2";
 
 export default function App() {
   return (
@@ -15,8 +15,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/singup1" element={<SingUp1 />} />
-        <Route path="/singup2" element={<SingUp2 />} />
+        <Route path="/singup1" element={<SignUp1 />} />
+        <Route path="/signup2" element={<SignUp2 />} />
         <Route path="/recovery" element={<PasswordRecovery />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin">
