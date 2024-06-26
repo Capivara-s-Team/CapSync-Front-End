@@ -1,12 +1,16 @@
 import { Container, Content } from "./PasswordRecovery.styles";
+import { MdOutlineMail } from "react-icons/md";
 
 import Navbar from "../../components/navbarMenu/NavbarMenu";
 
 import mainLogo from "../../assets/svg/main_logo.svg";
-import { InputField } from "../../components/inputField/InputField";
 import { Link } from "react-router-dom";
 import Button from "../../components/button/Button";
 import CardForms from "../../components/cardForms/CardForms";
+import {
+  IconWrapper,
+  InputContainer,
+} from "../../components/inputField/InputField.styles";
 
 export default function PasswordRecovery() {
   return (
@@ -19,9 +23,22 @@ export default function PasswordRecovery() {
 
         <CardForms text="Recuperação de senha" className="teste">
           <div>
-            <InputField id="password-input" type="email" label="Email" placeHolder="exemplo@exemplo.com.br" icon="Email" />
+            <div className="input">
+              <label>Email</label>
+              <InputContainer>
+                <IconWrapper>
+                  <MdOutlineMail />
+                </IconWrapper>
+                <input placeholder="exemplo@exemplo.com" type="text" />
+              </InputContainer>
+            </div>
             <div className="btns">
-              <Button text="Recuperar a senha" color="#fa6c00" textColor="#2f2f2f" width={17.5} />
+              <Button
+                text="Recuperar a senha"
+                color="#fa6c00"
+                textColor="#2f2f2f"
+                width={17.5}
+              />
 
               <Link to={"/signup1"}>Criar conta</Link>
               <Link to={"/login"}>Voltar</Link>

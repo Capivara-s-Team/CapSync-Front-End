@@ -17,6 +17,29 @@ export const Content = styled.div`
   height: 100%;
   padding: 40px 0;
 
+  .input {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: white;
+    }
+
+    input {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      border: 0;
+      color: #000;
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
   .btns {
     margin-top: 1.4rem;
 

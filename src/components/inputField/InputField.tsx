@@ -5,9 +5,9 @@ import { MdOutlineMail, MdOutlineLock } from "react-icons/md";
 import { Field } from "formik";
 
 interface InputFieldProps {
-  id: string;
+  id?: string;
   type: string;
-  name: string;
+  name?: string;
   placeHolder?: string;
   icon?:
     | "Linkedin"

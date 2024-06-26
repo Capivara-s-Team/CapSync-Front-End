@@ -52,7 +52,7 @@ export function Login() {
                 <Form>
                   <div className="inputs">
                     <div>
-                      <label htmlFor="email">Email</label>
+                      <label htmlFor="email">Email*</label>
                       <InputField
                         id="email"
                         name="email"
@@ -65,7 +65,7 @@ export function Login() {
                       ) : null}
                     </div>
                     <div>
-                      <label htmlFor="password">Senha</label>
+                      <label htmlFor="password">Senha*</label>
                       <InputField
                         id="password"
                         name="password"
