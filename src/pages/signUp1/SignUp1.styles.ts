@@ -37,11 +37,13 @@ export const Content = styled.div`
 `;
 
 export const ContentInputs = styled.div`
-  width: 100%;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  .form {
+    margin-top: 1rem;
+  }
 `;
 
 export const ContentButtons = styled.div`
