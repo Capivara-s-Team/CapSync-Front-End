@@ -33,16 +33,10 @@ export default function NavbarMenu() {
           <Link to={"/login"}>Login</Link>
         </span>
         <span>
-          <Link to={"/singup1"}>Cadastre-se</Link>
+          <Link to={"/signup1"}>Cadastre-se</Link>
         </span>
         <div>
-          <button onClick={toggleTheme}>
-            {theme === "light" ? (
-              <img src={dayIcon} alt="Icone de Lith mode" />
-            ) : (
-              <img src={nightIcon} alt="Icone do darkMode" />
-            )}
-          </button>
+          <button onClick={toggleTheme}>{theme === "light" ? <img src={dayIcon} alt="Icone de Lith mode" /> : <img src={nightIcon} alt="Icone do darkMode" />}</button>
         </div>
       </div>
     </Navbar>
