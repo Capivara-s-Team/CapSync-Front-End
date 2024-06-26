@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
@@ -25,4 +26,9 @@ export const GlobalStyle = createGlobalStyle`
             color: #f2f2f2;
          }
     }
+`;
+
+export const MessageError = styled.div`
+  color: red;
+  font-size: 12px;
 `;

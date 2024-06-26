@@ -2,17 +2,30 @@ import { BiSearch, BiUser } from "react-icons/bi";
 import { IconWrapper, InputContainer, Span } from "./InputField.styles";
 import { FaDiscord, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineMail, MdOutlineLock } from "react-icons/md";
+import { Field } from "formik";
 
 interface InputFieldProps {
-  id?: string;
+  id: string;
   type: string;
-  label: string;
+  name: string;
   placeHolder?: string;
-  value?: string[];
-  icon?: "Linkedin" | "Discord" | "Phone" | "Email" | "Password" | "User" | "Search";
+  icon?:
+    | "Linkedin"
+    | "Discord"
+    | "Phone"
+    | "Email"
+    | "Password"
+    | "User"
+    | "Search";
 }
 
-export function InputField({ id, type, label, placeHolder, icon, value }: InputFieldProps) {
+export function InputField({
+  id,
+  type,
+  name,
+  placeHolder,
+  icon,
+}: InputFieldProps) {
   const InputIcon = () => {
     switch (icon) {
       case "Linkedin":
@@ -26,7 +39,7 @@ export function InputField({ id, type, label, placeHolder, icon, value }: InputF
       case "Password":
         return <MdOutlineLock />;
       case "User":
-        return <BiUser />
+        return <BiUser />;
       case "Search":
         return <BiSearch />;
       default:
@@ -36,10 +49,9 @@ export function InputField({ id, type, label, placeHolder, icon, value }: InputF
 
   return (
     <Span>
-      {label}
       <InputContainer>
         <IconWrapper>{InputIcon()}</IconWrapper>
-        <input id={id} type={type} placeholder={placeHolder} value={value ? value : undefined} />
+        <Field id={id} name={name} type={type} placeholder={placeHolder} />
       </InputContainer>
     </Span>
   );
