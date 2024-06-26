@@ -7,9 +7,9 @@ import { InputField } from "../../components/inputField/InputField";
 import { ContentButtons, ContentInputs } from "./SingUp1.styles";
 import Button from "../../components/button/Button";
 import Navbar from "../../components/navbarMenu/NavbarMenu";
-import CardForms from "../../components/cardForms/CardForms";
 
 import { Link } from "react-router-dom";
+import CardForms from "../../components/cardForms/CardForms";
 
 export default function SingUp1() {
   const inputFields = [
@@ -54,41 +54,41 @@ export default function SingUp1() {
           <img className="center_logo" src={mainLogo} alt="Center Logo" />
         </div>
 
-      <CardForms text="Crie sua conta" className="teste"> {/* Passar a class de darkMode no className */}
-        
-      <ContentInputs>
-        {inputFields.map((field) => (
-          <InputField
-            key={field.label}
-            label={field.label}
-            placeHolder={field.placeholder}
-            type={field.type}
-            icon={field.icon}
-          />
-        ))}
-      </ContentInputs>
+        <CardForms text="Crie sua conta" className="teste">
+          {" "}
+          {/* Passar a class de darkMode no className */}
+          <ContentInputs>
+            {inputFields.map((field) => (
+              <InputField
+                key={field.label}
+                label={field.label}
+                placeHolder={field.placeholder}
+                type={field.type}
+                icon={field.icon}
+              />
+            ))}
+          </ContentInputs>
+          <ContentButtons>
+            <Link to={"/login"}>
+              <Button
+                text="Voltar"
+                color="rgba(68, 68, 68, 0.14)"
+                textColor="#F86B01"
+                width={15}
+              />
+            </Link>
 
-      <ContentButtons>
-        <Link to={"/login"}>
-          <Button
-            text="Voltar"
-            color="rgba(68, 68, 68, 0.14)"
-            textColor="#F86B01"
-            width={15}
-          />
-        </Link>
-
-        <Link to={"/singup2"}>
-          <Button 
-            text="Próximo" 
-            color="#F86B01" 
-            textColor="#312E38" 
-            width={15} 
-            icon={true} />
-        </Link>
-      </ContentButtons>
-
-      </CardForms>
+            <Link to={"/singup2"}>
+              <Button
+                text="Próximo"
+                color="#F86B01"
+                textColor="#312E38"
+                width={15}
+                icon={true}
+              />
+            </Link>
+          </ContentButtons>
+        </CardForms>
       </Content>
     </Container>
   );

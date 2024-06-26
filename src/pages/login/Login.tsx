@@ -4,10 +4,11 @@ import { GlobalStyle } from "../../styles/globalStyles";
 import mainLogo from "../../assets/svg/main_logo.svg";
 import Navbar from "../../components/navbarMenu/NavbarMenu";
 import Button from "../../components/button/Button";
+import CardForms from "../../components/cardForms/CardForms";
+
 import { InputField } from "../../components/inputField/InputField";
 
 import { Link } from "react-router-dom";
-import CardForms from "../../components/cardForms/CardForms";
 
 export function Login() {
   return (
