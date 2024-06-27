@@ -50,7 +50,7 @@ export default function SignUp1() {
     {
       id: "password",
       label: "Senha*",
-      placeholder: "No mínimo 6 caracteres",
+      placeholder: "No mínimo 8 caracteres",
       type: "password",
       icon: "Password" as const,
     },
