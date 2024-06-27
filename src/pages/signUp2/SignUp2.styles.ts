@@ -34,7 +34,16 @@ export const Content = styled.div`
       text-decoration: none;
     }
   }
-`;
+
+    form {
+      width: 496px;
+    }
+
+    label {
+      color: #f2f2f2;
+      font-size: 16px;
+    }
+  `;
 
 export const ContentInputs = styled.div`
   width: 100%;
@@ -58,20 +67,14 @@ export const ContentInputs = styled.div`
     }
 
     span:nth-of-type(1) {
-      width: 13.5rem;
+      width: 11.7rem;
       margin-right: 1rem;
     }
 
-    span:nth-of-type(2) {
-      width: 6rem;
-      margin-right: 0.5rem;
-    }
-
-    span:nth-of-type(3) {
-      width: 10rem;
-
-      input {
-        padding: 0;
+    .label-input-phone {
+      span:nth-of-type(1) {
+        width: 6rem;
+        margin-right: 0.5rem;
       }
     }
   }
@@ -102,15 +105,14 @@ export const ContentInputs = styled.div`
     }
   }
 
-  .select-squads,
-  .second-div {
+  .select-squads {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 1rem;
 
     select {
       height: 58px;
-      max-width: 13rem;
       border: none;
       background-color: #e4e4e4;
       padding: 10px;
@@ -127,3 +129,5 @@ export const ContentButtons = styled.div`
 
   margin-top: 2rem;
 `;
+
+
