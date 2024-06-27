@@ -9,6 +9,7 @@ export const Span = styled.span`
   gap: 8px;
 
   label {
+    color: #333;
     font-size: 14px;
   }
 `;
