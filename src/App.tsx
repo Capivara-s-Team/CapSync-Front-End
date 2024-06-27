@@ -8,7 +8,11 @@ import ListVolunteers from "./pages/listVolunteers/ListVolunteers";
 import PasswordRecovery from "./pages/passwordRecovery/PasswordRecovery";
 import SignUp1 from "./pages/signUp1/SignUp1";
 import SignUp2 from "./pages/signUp2/SignUp2";
+
+import HomeLogged from "./pages/homeLogged/HomeLogged";
+
 import SignUp3 from "./pages/signUp3/SignUp3";
+
 
 export default function App() {
   return (
@@ -18,7 +22,11 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup1" element={<SignUp1 />} />
         <Route path="/signup2" element={<SignUp2 />} />
+
+        <Route path="/homelogged" element={<HomeLogged />} />
+
         <Route path="/signup3" element={<SignUp3 />} />
+
         <Route path="/recovery" element={<PasswordRecovery />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin">
