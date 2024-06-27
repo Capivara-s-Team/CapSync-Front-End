@@ -29,16 +29,16 @@ export default function NavbarMenuLogged() {
       </div>
       <div className="navbar-icons">
         <span>
-          <Link to={"/"}>Home</Link>
+          <Link to={"/homeLogged"}>Home</Link>
         </span>
         <span>
-          <Link to={"/login"}>Voluntários</Link>
+          <Link to={"/list"}>Voluntários</Link>
         </span>
         <span>
           <Link to={"/profile"}> <img className="profile" src={profile_img} alt="Icone de logout" /></Link>
         </span>
         <span>
-          <Link to={"/home"}> <img src={logout_icon} alt="Icone de logout" /></Link>
+          <Link to={"/"}> <img src={logout_icon} alt="Icone de logout" /></Link>
         </span>
         <div>
           <button onClick={toggleTheme}>{theme === "light" ? <img src={dayIcon} alt="Icone de Lith mode" /> : <img src={nightIcon} alt="Icone do darkMode" />}</button>
