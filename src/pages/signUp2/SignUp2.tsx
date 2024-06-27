@@ -56,52 +56,60 @@ export default function SignUp2() {
 
         <CardForms text="Crie sua conta" className="teste">
           <Formik
-            initialValues={{}}
+            initialValues={{
+              linkedIn: "",
+              discord: "",
+              ddd: "",
+              phone: "",
+              textArea1: "",
+              textArea2: "",
+              firstSquad: "",
+              lastSquad: "",
+              voluntarieType: "",
+              seniority: "",
+            }}
             validationSchema={signUpSchemas}
             onSubmit={() => {}}>
             <Form>
               <ContentInputs>
+                <label>LinkedIn*</label>
                 <InputField
-                  id="a"
                   type="text"
-                  name="LinkedIn*"
+                  name="linkedIn"
                   placeHolder="LinkedIn"
                   icon="Linkedin"
                 />
                 <div className="teste">
+                  <label>Discord*</label>
                   <InputField
-                    id="a"
                     type="text"
-                    name="Discord*"
+                    name="discord"
                     placeHolder="Discord"
                     icon="Discord"
                   />
-
+                  <label>Telefone*</label>
                   <InputField
-                    id="a"
-                    type="number"
-                    name="Telefone*"
+                    type="text"
+                    name="ddd"
                     placeHolder="+55"
                     icon="Phone"
                   />
-
                   <InputField
-                    id="a"
                     type="text"
-                    name="a"
+                    name="phone"
                     placeHolder="(00) 99999-9999"
                   />
                 </div>
 
                 <div className="question1">
-                  <label htmlFor="">
+                  <label>
                     Por que você quer fazer parte da equipe Bichinhos da TI?*
                   </label>
                   <textarea></textarea>
                 </div>
 
                 <div className="question1">
-                  <label htmlFor="">
+                  <label>
                     O que significa o trabalho voluntário na sua vida?*
                   </label>
                   <textarea></textarea>
@@ -166,15 +174,14 @@ export default function SignUp2() {
                   />
                 </Link>
 
-                <Link to={"/signup3"}>
-                  <Button
-                    text="Próximo"
-                    color="#F86B01"
-                    textColor="#312E38"
-                    width={15}
-                    icon={true}
-                  />
-                </Link>
+                <Button
+                  type="submit"
+                  text="Próximo"
+                  color="#F86B01"
+                  textColor="#312E38"
+                  width={15}
+                  icon={true}
+                />
               </ContentButtons>
             </Form>
           </Formik>
