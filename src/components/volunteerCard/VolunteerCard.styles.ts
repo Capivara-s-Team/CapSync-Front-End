@@ -1,7 +1,52 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
+  font-size: 18px;
+  font-weight: bold;
+
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  justify-content: space-around;
+
+  width: 50%;
+  height: 70px;
+  padding-bottom: .4rem;
+
+  align-items: center;
+
+  border-bottom: 1px solid rgba(168, 168, 168, .3);
+
+  .circle {
+    background-color: #F86B01;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    p {
+      text-align: center;
+      margin-top: 18px;
+    }
+  }
+
+  .name {
+    color: #79797B;
+  }
+
+  .orange {
+    color: #F86B01;
+  }
+
+  .ativo {
+    color: #007913;
+    background-color: #B5F0BB;
+    border-radius: 10px;
+    padding: .4rem .8rem;
+  }
+
+  .inativo {
+    color: #FF002E;
+    background-color: #F3ACAC;
+    border-radius: 10px;
+    padding: .4rem .8rem;
+  }
 `;
