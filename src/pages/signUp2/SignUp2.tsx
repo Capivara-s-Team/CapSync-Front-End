@@ -85,28 +85,35 @@ export default function SignUp2() {
             }}>
             <Form>
               <ContentInputs>
-                <label>LinkedIn*</label>
-                <InputField
-                  type="text"
-                  name="linkedIn"
-                  placeHolder="LinkedIn"
-                  icon="Linkedin"
-                />
-                <div className="teste">
-                  <label>Discord*</label>
+                <div className="label-input">
+                  <label>LinkedIn*</label>
                   <InputField
+                    type="text"
+                    name="linkedIn"
+                    placeHolder="LinkedIn"
+                    icon="Linkedin"
+                  />
+                </div>
+
+                <div className="teste">
+                  <div className="label-input">
+                    <label>Discord*</label>
+                    <InputField
                     type="text"
                     name="discord"
                     placeHolder="Discord"
                     icon="Discord"
                   />
-                  <label>Telefone*</label>
-                  <InputField
+                  </div>                
+                  <div className="label-input-phone">
+                    <label>Telefone*</label>
+                    <InputField
                     type="text"
                     name="ddd"
                     placeHolder="+55"
                     icon="Phone"
-                  />
+                    />
+                  </div>
                   <InputField
                     type="text"
                     name="phone"
@@ -152,7 +159,7 @@ export default function SignUp2() {
                   </div>
                 </div>
 
-                <div className="second-div">
+                <div className="select-squads">
                   <div className="select3">
                     <label>Tipo de volutário?*</label>
                     <Field name="voluntarieType" as="select">
