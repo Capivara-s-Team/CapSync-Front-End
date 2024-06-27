@@ -50,7 +50,7 @@ export const ContentInputs = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 
   .teste {
     display: flex;
@@ -102,6 +102,10 @@ export const ContentInputs = styled.div`
       color: #000;
       resize: none;
       font-size: 16px;
+
+      &:focus {
+      outline: none;
+    }
     }
   }
 
@@ -110,6 +114,10 @@ export const ContentInputs = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+
+    div {
+      flex: 1;
+    }
 
     select {
       height: 58px;
