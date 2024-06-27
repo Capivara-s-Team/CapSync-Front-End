@@ -53,7 +53,7 @@ export const ContentInputs = styled.div`
       margin: 0;
     }
 
-    input[type=number] {
+    input[type="number"] {
       -moz-appearance: textfield;
     }
 
@@ -69,14 +69,19 @@ export const ContentInputs = styled.div`
 
     span:nth-of-type(3) {
       width: 10rem;
-      
+
       input {
         padding: 0;
       }
     }
   }
 
-  .question1, .question2, .select1, .select2, .select3, .select4 {
+  .question1,
+  .question2,
+  .select1,
+  .select2,
+  .select3,
+  .select4 {
     display: flex;
     flex-direction: column;
 
@@ -97,7 +102,8 @@ export const ContentInputs = styled.div`
     }
   }
 
-  .select-squads, .second-div {
+  .select-squads,
+  .second-div {
     display: flex;
     flex-direction: row;
     gap: 1rem;
