@@ -10,11 +10,18 @@ export const Content = styled.div`
 
   width: 50%;
   height: 70px;
-  padding-bottom: .4rem;
+  padding: .4rem;
 
   align-items: center;
 
   border-bottom: 1px solid rgba(168, 168, 168, .3);
+
+  .nameAndImage {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
 
   .circle {
     background-color: #F86B01;
@@ -40,13 +47,13 @@ export const Content = styled.div`
     color: #007913;
     background-color: #B5F0BB;
     border-radius: 10px;
-    padding: .4rem .8rem;
+    padding: .2rem 1.5rem;
   }
 
   .inativo {
     color: #FF002E;
     background-color: #F3ACAC;
     border-radius: 10px;
-    padding: .4rem .8rem;
+    padding: .2rem 1.5rem;
   }
 `;

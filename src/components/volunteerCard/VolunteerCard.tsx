@@ -15,8 +15,12 @@ export default function VolunteerCard({
 }: VolunteerCardProps) {
   return (
     <Content>
-      <div className="circle"><p>{name.charAt(0)}</p></div>
-      <p className="name">{name}</p>
+      <div className="nameAndImage">
+        <div className="circle">
+          <p>{name.charAt(0)}</p>
+        </div>
+        <p className="name">{name}</p>
+      </div>
       <p className="orange">{squad}</p>
       <p className="orange">{seniority}</p>
       <div className={status === "Ativo" ? "ativo" : "inativo"}>{status}</div>
