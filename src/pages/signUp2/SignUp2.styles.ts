@@ -40,7 +40,7 @@ export const Content = styled.div`
     }
 
     label {
-      color: #f2f2f2;
+      color: #333;
       font-size: 16px;
     }
   `;
@@ -87,11 +87,6 @@ export const ContentInputs = styled.div`
   .select4 {
     display: flex;
     flex-direction: column;
-
-    label {
-      color: #f2f2f2;
-      font-size: 16px;
-    }
 
     textarea {
       height: 7rem;
