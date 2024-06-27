@@ -9,8 +9,8 @@ import Button from "../../components/button/Button";
 import Navbar from "../../components/navbarMenu/NavbarMenu";
 import CardForms from "../../components/cardForms/CardForms";
 
-import { Link } from "react-router-dom";
-import { Formik, Form, Field } from "formik";
+import { Link, useNavigate } from "react-router-dom";
+import { Formik, Form, Field, FormikHelpers } from "formik";
 import * as Yup from "yup";
 
 interface valuesSingUp2 {
@@ -28,6 +28,8 @@ interface valuesSingUp2 {
 }
 
 export default function SignUp2() {
+  const navigate = useNavigate();
+
   const squadOptions = [
     "Front-end",
     "Back end",
@@ -40,7 +42,7 @@ export default function SignUp2() {
     "Games",
     "Mobile",
   ];
-  const voluntariesOptions = ["Mentor", "Voluntário", "Lider"];
+  const voluntariesOptions = ["Voluntário", "Mentor", "Lider"];
   const seniority = ["Junior", "Pleno", "Senior"];
 
   const signUpSchemas = Yup.object().shape({});
@@ -63,13 +65,24 @@ export default function SignUp2() {
               phone: "",
               textArea1: "",
               textArea2: "",
-              firstSquad: "",
-              lastSquad: "",
-              voluntarieType: "",
-              seniority: "",
+              firstSquad: "Front-end",
+              lastSquad: "Front-end",
+              voluntarieType: "Voluntário",
+              seniority: "Junior",
             }}
             validationSchema={signUpSchemas}
-            onSubmit={() => {}}>
+            onSubmit={(
+              values: valuesSingUp2,
+              { setSubmitting, validateForm }: FormikHelpers<valuesSingUp2>
+            ) => {
+              validateForm().then((errors) => {
+                if (Object.keys(errors).length === 0) {
+                  console.log(values); // Mandar retorno para o back
+                  navigate("/"); // Mandar para a rota certa (signUp3)
+                }
+                setSubmitting(false);
+              });
+            }}>
             <Form>
               <ContentInputs>
                 <label>LinkedIn*</label>
@@ -142,7 +155,7 @@ export default function SignUp2() {
                 <div className="second-div">
                   <div className="select3">
                     <label>Tipo de volutário?*</label>
-                    <Field name="voluntariesOptions" as="select">
+                    <Field name="voluntarieType" as="select">
                       {voluntariesOptions.map((value, index) => (
                         <option key={index} value={value}>
                           {value}
