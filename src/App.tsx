@@ -30,7 +30,7 @@ export default function App() {
         <Route path="/recovery" element={<PasswordRecovery />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin">
-          <Route path="list" element={<ListVolunteers />} />
+        <Route path="/list" element={<ListVolunteers />} />
         </Route>
         <Route path="/*" element={<Error />} />
       </Routes>
