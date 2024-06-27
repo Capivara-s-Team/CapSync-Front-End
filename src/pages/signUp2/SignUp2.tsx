@@ -25,6 +25,7 @@ interface valuesSingUp2 {
   lastSquad: string;
   voluntarieType: string;
   seniority: string;
+  stacks: string | string[];
 }
 
 export default function SignUp2() {
@@ -56,7 +57,12 @@ export default function SignUp2() {
     lastSquad: Yup.string().required("Escolha uma opção"),
     voluntarieType: Yup.string().required("Escolha uma opção"),
     seniority: Yup.string().required("Escolha uma opção"),
+    stacks: Yup.string().required("Escreva pelo menos uma"),
   });
+
+  const splitString = (value: string) => {
+    return value.split(",").map((stack) => stack.trim());
+  };
 
   return (
     <Container>
@@ -80,6 +86,7 @@ export default function SignUp2() {
               lastSquad: "Front-end",
               voluntarieType: "Voluntário",
               seniority: "Junior",
+              stacks: "",
             }}
             validationSchema={signUpSchemas}
             onSubmit={(
@@ -88,8 +95,9 @@ export default function SignUp2() {
             ) => {
               validateForm().then((errors) => {
                 if (Object.keys(errors).length === 0) {
+                  values.stacks = splitString(values.stacks as string);
                   console.log(values); // Mandar retorno para o back
-                  navigate("/"); // Mandar para a rota certa (signUp3)
+                  navigate("/signup3");
                 }
                 setSubmitting(false);
               });
@@ -136,14 +144,14 @@ export default function SignUp2() {
                       ) : null}
                     </div>
                     <div>
-                    <InputField
-                      type="text"
-                      name="phone"
-                      placeHolder="(00) 99999-9999"
-                    />
-                    {errors.phone && touched.phone ? (
-                      <MessageError>{errors.phone}</MessageError>
-                    ) : null}
+                      <InputField
+                        type="text"
+                        name="phone"
+                        placeHolder="(00) 99999-9999"
+                      />
+                      {errors.phone && touched.phone ? (
+                        <MessageError>{errors.phone}</MessageError>
+                      ) : null}
                     </div>
                   </div>
 
@@ -225,6 +233,14 @@ export default function SignUp2() {
                         <MessageError>{errors.seniority}</MessageError>
                       ) : null}
                     </div>
+                  </div>
+                  <div>
+                    <label>Stacks*</label>
+                    <InputField
+                      name="stacks"
+                      placeHolder='Separe suas stacks por vírgula ","'
+                      type="text"
+                    />
                   </div>
                 </ContentInputs>
 
