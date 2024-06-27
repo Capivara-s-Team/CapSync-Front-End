@@ -23,6 +23,7 @@ justify-content: space-evenly;
   span{
     font-size: 1rem;
     color: #FFF;
+    text-align: justify;
   }
 }
 
