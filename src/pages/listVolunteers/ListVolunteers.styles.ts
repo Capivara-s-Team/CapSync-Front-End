@@ -30,9 +30,9 @@ export const Content = styled.div`
     background-color: #e4e4e4;
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 8px 15px;
     border-radius: 8px;
-    width: 496px;
+    width: 600px;
   
     input {
       background-color: transparent;
@@ -46,5 +46,21 @@ export const Content = styled.div`
       &:focus {
         outline: none;
       }
+  }
+`;
+
+export const Table = styled.div`
+
+.table {
+    margin-top: 72px;
+    font-weight: bold;
+    padding: 0 20px;
+
+    border-bottom: 1px solid #333;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
   }
 `;
