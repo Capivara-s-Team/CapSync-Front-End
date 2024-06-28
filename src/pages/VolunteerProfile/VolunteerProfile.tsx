@@ -2,8 +2,10 @@ import { Field, Form, Formik } from "formik";
 import CardForms from "../../components/cardForms/CardForms";
 import NavbarMenuLogged from "../../components/navbarMenuLogged/NavbarMenuLogged";
 import { GlobalStyle } from "../../styles/globalStyles";
-import { Container, Content, InputName, InfoArea, DiscordArea, Stacks, ContentInputs, TextInfoArea, SquadOptions } from "./VolunteerProfile.styles";
+import { Container, Content, InputName, InfoArea, DiscordArea, Stacks, ContentInputs, TextInfoArea, SquadOptions, StatusInfoWrapper, ContentButtons } from "./VolunteerProfile.styles";
 import { InputField } from "../../components/inputField/InputField";
+import { Link } from "react-router-dom";
+import Button from "../../components/button/Button";
 
 export function VolunteerProfile() {
   const name = "Name";
@@ -38,6 +40,37 @@ export function VolunteerProfile() {
     {
       name: "Você possui alguma deficiência?",
       value: ["Sim", "Não"], // Adicionado novo item com 2 opções de checkbox
+    },
+    {
+      name: "Se sim, qual?",
+      value: [] as string[], // Definido como um array vazio de strings
+    },
+    {
+      name: "Data de inscrição",
+      value: [] as string[], // Definido como um array vazio de strings
+    },
+  ];
+
+  const StatusInfoList = [
+    {
+      value: "Status",
+      name: ["Ativo", "Inativo", "Em espera"],
+      visible: true, // primeiro item invisível
+    },
+    {
+      value: "Squad atual",
+      name: ["Front-end", "Back-end"],
+      visible: true,
+    },
+    {
+      value: "Tipo de voluntário",
+      name: ["Mentor", "Voluntário"],
+      visible: true,
+    },
+    {
+      value: "Status",
+      name: ["Ativo", "Em Operação"],
+      visible: false,
     },
   ];
 
@@ -116,7 +149,7 @@ export function VolunteerProfile() {
                     <div key={index}>
                       <label htmlFor="">{item.name}</label>
                       {item.name === "Você possui alguma deficiência?" ? (
-                        <div>
+                        <div className="chooseInput">
                           {item.value.map((option, idx) => (
                             <label key={idx}>
                               <Field type="checkbox" name="disability" value={option} />
@@ -130,9 +163,33 @@ export function VolunteerProfile() {
                     </div>
                   ))}
                 </SquadOptions>
+                <div className="labelStatus">
+                  <label htmlFor="">teste</label>
+                </div>
+                <StatusInfoWrapper>
+                  {StatusInfoList.map(({ name, value, visible }, index) => (
+                    <div key={index} style={{ visibility: visible ? "visible" : "hidden" }}>
+                      <label htmlFor="">{value}</label>
+                      <Field name="Status" as="select">
+                        {name.map((n, index) => (
+                          <option key={index} value={n}>
+                            {n}
+                          </option>
+                        ))}
+                      </Field>
+                    </div>
+                  ))}
+                </StatusInfoWrapper>
               </Form>
             </Formik>
           </ContentInputs>
+          <ContentButtons>
+            <Link to={"/"}>
+              <Button text="Voltar" color="rgba(68, 68, 68, 0.14)" textColor="#F86B01" width={15} />
+            </Link>
+
+            <Button type="submit" text="Próximo" color="#F86B01" textColor="#312E38" width={15} icon={true} />
+          </ContentButtons>
         </CardForms>
       </Content>
     </Container>

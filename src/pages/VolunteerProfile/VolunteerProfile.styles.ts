@@ -49,7 +49,11 @@ export const Content = styled.div`
 
   `;
 
-export const ContentInputs = styled.div``;
+export const ContentInputs = styled.div`
+.labelStatus{
+  width: 100%;
+}
+`;
 
 export const InputName = styled.div`
 display: flex;
@@ -152,9 +156,69 @@ export const SquadOptions = styled.div`
   gap: 1rem;
 
   label{
-    letter-spacing: 0.125rem;
+    letter-spacing: 0.075rem;
     margin: 1rem 0px;
     height: 24px;
-    text-align: justify;
   }
+
+.chooseInput{
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-evenly;
+
+  label{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+  }
+
+  input{
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 8px;
+  }
+}
+`;
+
+export const StatusInfoWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  div {
+    display: grid;
+    visibility: visible; /* Garante que todos os divs internos sejam visíveis */
+  }
+
+  label{
+    margin-bottom: 8px;
+  }
+
+  select {
+    width: 290px;
+    height: 48px;
+    border-radius: 8px;
+    border: 0;
+    padding: 0px 16px;
+  }
+`;
+
+export const ContentButtons = styled.div`
+  display: flex;
+  gap: 1rem;
+
+  button{
+    width: 290px;
+  }
+`;
+
+export const SelectInput = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
 `;
