@@ -45,9 +45,9 @@ Local : http://localhost:5273/
 This project is under [MIT licensed](./LICENSE)
 
 ## Contribuidores 🙎🏻‍♂️
-Front-end: Gabriel Navarro, Isabella Corrêa, Pierre Souza
-Back-end: Claudio Netto Junior, Felipe Cruz, Jorge Lima, Yuri Sena, Gustavo Seráfio Correa de Brito
-QA: Gilliard Inacio de Lima, Rosana da Silva Andre
+- Front-end: Gabriel Navarro, Isabella Corrêa, Pierre Souza
+- Back-end: Claudio Netto Junior, Felipe Cruz, Jorge Lima, Yuri Sena, Gustavo Seráfio Correa de Brito
+- QA: Gilliard Inacio de Lima, Rosana da Silva Andre
 
 
 
