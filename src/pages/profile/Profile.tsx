@@ -35,8 +35,8 @@ export default function Profile() {
         discord: Yup.string().required("Este campo é obrigatório"),
         ddd: Yup.string().max(2, "Máx 2").required("Obrigatório"),
         phone: Yup.string().max(15, "Máx 15").required("Este campo é obrigatório")
-
         })
+        
     return(
         <Container>
             <GlobalStyle />
