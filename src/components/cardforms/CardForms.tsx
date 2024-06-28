@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 import { Container } from "./CardForms.styles";
 
 interface CardFormsProps {
-  text: string;
-  className: string;
+  text?: string;
+  className?: string;
   children: ReactNode;
 }
 
@@ -15,8 +15,8 @@ export default function CardForms({
   return (
     <Container className={className}>
       <div className="title">
-        <h1>Bichinhos da TI</h1>
-        <p>{text}</p>
+        {text ? <h1>Bichinhos da Ti</h1> : undefined}
+        {text ? <p>{text}</p> : undefined}
       </div>
       {children}
     </Container>
