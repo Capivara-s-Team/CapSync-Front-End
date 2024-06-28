@@ -36,7 +36,7 @@ export default function Profile() {
         ddd: Yup.string().max(2, "Máx 2").required("Obrigatório"),
         phone: Yup.string().max(15, "Máx 15").required("Este campo é obrigatório")
         })
-        
+
     return(
         <Container>
             <GlobalStyle />
@@ -150,7 +150,7 @@ export default function Profile() {
                 </ContentInputs>
 
                 <ContentButtons>
-                    <Link to={"/"}>
+                    <Link to={"/homelogged"}>
                         <Button
                         text="Voltar"
                         color="rgba(68, 68, 68, 0.14)"
