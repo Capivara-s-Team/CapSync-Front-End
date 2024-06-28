@@ -109,7 +109,7 @@ export function VolunteerProfile() {
                     </label>
                     <InputField id="a" type="text" name="teste" placeHolder="Discord" icon="Discord" />
                   </div>
-                  <div className="teste">
+                  <div className="phone">
                     <div className="tele">
                       <label htmlFor="" className="title">
                         Telefone
@@ -163,9 +163,6 @@ export function VolunteerProfile() {
                     </div>
                   ))}
                 </SquadOptions>
-                <div className="labelStatus">
-                  <label htmlFor="">teste</label>
-                </div>
                 <StatusInfoWrapper>
                   {StatusInfoList.map(({ name, value, visible }, index) => (
                     <div key={index} style={{ visibility: visible ? "visible" : "hidden" }}>

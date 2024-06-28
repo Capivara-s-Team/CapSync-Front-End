@@ -92,7 +92,7 @@ export const DiscordArea = styled.div`
   }
 
 
-  .teste {
+  .phone {
     display: flex;
     justify-content: center;
     align-items: center;
