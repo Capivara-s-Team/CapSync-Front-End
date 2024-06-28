@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import CardForms from "../../components/cardForms/CardForms";
 import NavbarMenuLogged from "../../components/navbarMenuLogged/NavbarMenuLogged";
@@ -15,11 +16,11 @@ export function VolunteerProfile() {
   const SquadInfo = [
     {
       name: "Em qual squad você gostaria de participar?",
-      value: ["front-end", "back-end"], // Alterado para um array
+      value: ["front-end", "back-end"],
     },
     {
       name: "Qual squad seria sua segunda opção?",
-      value: ["back-end", "front-end"], // Alterado para um array
+      value: ["back-end", "front-end"],
     },
     {
       name: "Tipo de voluntário",
@@ -27,27 +28,27 @@ export function VolunteerProfile() {
     },
     {
       name: "Senioridade",
-      value: ["junior", "pleno"], // Alterado para um array
+      value: ["junior", "pleno"],
     },
     {
       name: "Autodeclaração étnico-racial",
-      value: [] as string[], // Definido como um array vazio de strings
+      value: [] as string[],
     },
     {
       name: "Gênero",
-      value: [] as string[], // Definido como um array vazio de strings
+      value: [] as string[],
     },
     {
       name: "Você possui alguma deficiência?",
-      value: ["Sim", "Não"], // Adicionado novo item com 2 opções de checkbox
+      value: ["Sim", "Não"],
     },
     {
       name: "Se sim, qual?",
-      value: [] as string[], // Definido como um array vazio de strings
+      value: [] as string[],
     },
     {
       name: "Data de inscrição",
-      value: [] as string[], // Definido como um array vazio de strings
+      value: [] as string[],
     },
   ];
 
@@ -55,7 +56,7 @@ export function VolunteerProfile() {
     {
       value: "Status",
       name: ["Ativo", "Inativo", "Em espera"],
-      visible: true, // primeiro item invisível
+      visible: true,
     },
     {
       value: "Squad atual",
@@ -73,6 +74,12 @@ export function VolunteerProfile() {
       visible: false,
     },
   ];
+
+  const [selectedDisability, setSelectedDisability] = useState("");
+
+  const handleDisabilityChange = (option: React.SetStateAction<string>) => {
+    setSelectedDisability(option);
+  };
 
   return (
     <Container>
@@ -152,7 +159,7 @@ export function VolunteerProfile() {
                         <div className="chooseInput">
                           {item.value.map((option, idx) => (
                             <label key={idx}>
-                              <Field type="checkbox" name="disability" value={option} />
+                              <Field type="checkbox" name="disability" value={option} checked={selectedDisability === option} onChange={() => handleDisabilityChange(option)} />
                               {option}
                             </label>
                           ))}
