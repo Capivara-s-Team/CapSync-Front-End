@@ -6,11 +6,11 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  width: 50%;
+  width: 100%;
   height: 70px;
-  padding: .4rem;
+  padding: .4rem 1.4rem;
 
   align-items: center;
 

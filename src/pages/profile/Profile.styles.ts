@@ -11,12 +11,13 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 600px;
+  height: 100vh;
   padding-top: 52px;
   display: flex;
 
   form {
-      width: 496px;
-    }
+    width: 496px;
+  }
 
   .circle {
     background-color: #000;
@@ -37,22 +38,20 @@ export const Content = styled.div`
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    
+
     span {
       width: 15rem;
     }
   }
-
-  
 `;
 
 export const ContentInputs = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-    .teste {
+  .teste {
     display: flex;
     align-items: flex-end;
 
