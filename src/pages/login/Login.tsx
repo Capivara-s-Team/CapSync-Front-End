@@ -1,3 +1,4 @@
+// src/components/LoginForm.tsx
 import { Container, Content } from "./Login.styles";
 import { GlobalStyle, MessageError } from "../../styles/globalStyles";
 
@@ -8,14 +9,23 @@ import CardForms from "../../components/cardForms/CardForms";
 
 import { InputField } from "../../components/inputField/InputField";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form, FormikHelpers } from "formik";
 import * as Yup from "yup";
+import { useMutation } from "@tanstack/react-query";
 
-interface valuesLogin {
+import axios from "axios";
+import { storageAuthTokenSave } from "../../storage/storageToken";
+
+interface ValuesLogin {
   email: string;
   password: string;
 }
+
+interface responseBack {
+  token: string;
+}
+
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
@@ -25,6 +35,21 @@ const LoginSchema = Yup.object().shape({
 });
 
 export function Login() {
+const navigate = useNavigate();
+
+  const mutation = useMutation({
+    mutationFn: ({ email, password }: ValuesLogin) => {
+      return axios
+        .post("http://localhost:8080/auth/login", { email, password })
+        .then((res) => res.data);
+    },
+    onSuccess: (data: responseBack) => {
+      storageAuthTokenSave(data.token);
+      navigate("/homelogged");
+    },
+    onError: () => alert("Senha ou email inválidos"),
+  });
+
   return (
     <Container>
       <GlobalStyle />
@@ -39,13 +64,15 @@ export function Login() {
             <Formik
               initialValues={{ email: "", password: "" }}
               onSubmit={(
-                values: valuesLogin,
-                { setSubmitting }: FormikHelpers<valuesLogin>
+                values: ValuesLogin,
+                { setSubmitting, validateForm }: FormikHelpers<ValuesLogin>
               ) => {
-                setTimeout(() => {
-                  console.log(values); // mandar o retorno para o Back end
-                  setSubmitting(false);
-                }, 400);
+                validateForm().then((errors) => {
+                  if (Object.keys(errors).length === 0) {
+                    mutation.mutate(values);
+                    setSubmitting(false);
+                  }
+                });
               }}
               validationSchema={LoginSchema}>
               {({ errors, touched }) => (
@@ -86,7 +113,6 @@ export function Login() {
                       textColor="#2f2f2f"
                       width={17.5}
                     />
-
                     <Link to={"/signup1"}>Criar conta</Link>
                     <Link to={"/recovery"}>Esqueceu sua senha?</Link>
                   </div>

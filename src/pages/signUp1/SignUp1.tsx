@@ -115,7 +115,7 @@ export default function SignUp1() {
               ) => {
                 validateForm().then((errors) => {
                   if (Object.keys(errors).length === 0) {
-                    alert(values);
+                   console.log(values) // Passar o retorno pro back end
                     navigate("/signup2");
                   }
                   setSubmitting(false);
