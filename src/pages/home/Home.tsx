@@ -5,12 +5,14 @@ import { Container, MainContainer, Content, Logo } from "./Home.styles";
 import NavbarMenu from "../../components/navbarMenu/NavbarMenu";
 import { GlobalStyle } from "../../styles/globalStyles";
 import Footer from "../../components/footer/Footer";
+import { storageAuthTokenGet } from "../../storage/storageToken";
+import NavbarMenuLogged from "../../components/navbarMenuLogged/NavbarMenuLogged";
 
 export default function Home() {
   return (
     <Container>
       <GlobalStyle />
-      <NavbarMenu />
+      {storageAuthTokenGet() ? <NavbarMenuLogged /> : <NavbarMenu />}
       <MainContainer>
         <div className="Box-logo">
           <Logo src={mainLogo} alt="Logo da Bichinhos" />
@@ -21,8 +23,10 @@ export default function Home() {
           </h1>
 
           <p className="second-title">
-            Comunidade dedicada ao aprendizado prático e gratuito, onde indivíduos com diversas experiências, desde líderes tecnológicos até iniciantes na área de tecnologia, estão prontos para
-            oferecer auxílio.
+            Comunidade dedicada ao aprendizado prático e gratuito, onde
+            indivíduos com diversas experiências, desde líderes tecnológicos até
+            iniciantes na área de tecnologia, estão prontos para oferecer
+            auxílio.
           </p>
           <Footer />
         </Content>

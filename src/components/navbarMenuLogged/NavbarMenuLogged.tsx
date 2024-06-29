@@ -9,6 +9,7 @@ import profile_img from "../../assets/svg/profile_img.svg";
 
 import { Link } from "react-router-dom";
 import { NavbarLogged } from "./NavbarMenuLogged.styles";
+import { storageAuthTokenRemove } from "../../storage/storageToken";
 
 export default function NavbarMenuLogged() {
   const [theme, setTheme] = useState("light");
@@ -20,6 +21,10 @@ export default function NavbarMenuLogged() {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  const logout = () => {
+    storageAuthTokenRemove();
+  }
 
   return (
     <NavbarLogged>
@@ -38,7 +43,7 @@ export default function NavbarMenuLogged() {
           <Link to={"/profile"}> <img className="profile" src={profile_img} alt="Icone de logout" /></Link>
         </span>
         <span>
-          <Link to={"/"}> <img src={logout_icon} alt="Icone de logout" /></Link>
+          <Link onClick={logout} to={"/"}> <img src={logout_icon} alt="Icone de logout" /></Link>
         </span>
         <div>
           <button onClick={toggleTheme}>{theme === "light" ? <img src={dayIcon} alt="Icone de Lith mode" /> : <img src={nightIcon} alt="Icone do darkMode" />}</button>

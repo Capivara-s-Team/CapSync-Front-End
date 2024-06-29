@@ -62,7 +62,7 @@ export default function SignUp2() {
             <Link to={"/signup1"}>
               <Button text="Voltar" color="rgba(68, 68, 68, 0.14)" textColor="#F86B01" width={15} />
             </Link>
-            <Link to={"/signup3"}>
+            <Link to={"/login"}>
               <Button text="Cadastrar" color="#F86B01" textColor="#312E38" width={15} icon={true} />
             </Link>
           </ContentButtons>

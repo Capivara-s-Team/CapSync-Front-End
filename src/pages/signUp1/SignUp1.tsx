@@ -12,14 +12,16 @@ import { Link, useNavigate } from "react-router-dom";
 import CardForms from "../../components/cardForms/CardForms";
 import { Formik, Form, FormikHelpers } from "formik";
 import * as Yup from "yup";
+import { useMutation } from "@tanstack/react-query";
+import axios from "axios";
 
 interface valuesSingUp1 {
   id?: string;
   name: string;
-  lastName: string;
+  surname: string;
   email: string;
   password: string;
-  rePassword: string;
+  rePassword?: string;
 }
 
 export default function SignUp1() {
@@ -34,7 +36,7 @@ export default function SignUp1() {
       icon: "User" as const,
     },
     {
-      id: "lastName",
+      id: "surname",
       label: "Sobrenome*",
       placeholder: "Sobrenome",
       type: "text",
@@ -68,7 +70,7 @@ export default function SignUp1() {
       .min(2, "Mínimo 2 caracteres!")
       .max(40, "Máximo 40 caracteres!")
       .required("Este campo é obrigatório!"),
-    lastName: Yup.string()
+    surname: Yup.string()
       .min(2, "Mínimo 2 caracteres!")
       .max(40, "Máximo 40 caracteres!")
       .required("Este campo é obrigatório!"),
@@ -88,6 +90,25 @@ export default function SignUp1() {
       .required("Este campo é obrigatório!"),
   });
 
+  const mutation = useMutation({
+    mutationFn: ({ name, surname, email, password, rePassword }: valuesSingUp1) => {
+      return axios
+        .post("http://localhost:8080/user/register", {
+          name,
+          surname,
+          email,
+          password,
+          rePassword
+        })
+        .then((res) => res.data);
+    },
+    onSuccess: () => {
+      navigate("/signup2");
+    }, onError: (erro) => {
+      console.log(erro)
+    }
+  });
+
   return (
     <Container>
       <GlobalStyle />
@@ -103,7 +124,7 @@ export default function SignUp1() {
             <Formik
               initialValues={{
                 name: "",
-                lastName: "",
+                surname: "",
                 email: "",
                 password: "",
                 rePassword: "",
@@ -115,8 +136,8 @@ export default function SignUp1() {
               ) => {
                 validateForm().then((errors) => {
                   if (Object.keys(errors).length === 0) {
-                   console.log(values) // Passar o retorno pro back end
-                    navigate("/signup2");
+                    console.log(values)
+                    mutation.mutate(values);
                   }
                   setSubmitting(false);
                 });

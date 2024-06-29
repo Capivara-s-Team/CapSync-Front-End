@@ -26,7 +26,6 @@ interface responseBack {
   token: string;
 }
 
-
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
     .email("Email inválido")
@@ -35,7 +34,7 @@ const LoginSchema = Yup.object().shape({
 });
 
 export function Login() {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const mutation = useMutation({
     mutationFn: ({ email, password }: ValuesLogin) => {

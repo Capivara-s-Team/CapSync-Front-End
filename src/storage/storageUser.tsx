@@ -13,5 +13,5 @@ export async function storageUserGet() {
 }
 
 export async function storageUserDelete() {
-  await localStorage.removeItem(USER_STORAGE);
+   localStorage.removeItem(USER_STORAGE);
 }
