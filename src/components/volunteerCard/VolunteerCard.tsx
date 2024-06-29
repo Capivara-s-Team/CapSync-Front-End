@@ -23,7 +23,7 @@ export default function VolunteerCard({
       </div>
       <p className="orange">{squad}</p>
       <p className="orange">{seniority}</p>
-      <div className={status === "Ativo" ? "ativo" : "inativo"}>{status}</div>
+      <div className={status === "ATIVO" ? "ativo" : "inativo"}>{status}</div>
     </Content>
   );
 }

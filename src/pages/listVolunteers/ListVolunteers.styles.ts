@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const LoadingStyled = styled.div`
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin: 20rem 52rem;
+`;
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -32,7 +40,6 @@ export const Content = styled.div`
 
   label {
     margin-top: 36px;
-
   }
 
   .filter-input {
@@ -60,7 +67,6 @@ export const Content = styled.div`
 `;
 
 export const Table = styled.div`
-
   .table {
     font-size: 22px;
 
@@ -73,7 +79,7 @@ export const Table = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
     :nth-child(2) {
       margin-left: 4.2rem;
     }

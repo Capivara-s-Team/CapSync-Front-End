@@ -1,15 +1,15 @@
 import { AUTH_TOKEN_STORAGE } from "./storageConfig";
 
 export async function storageAuthTokenSave(token: any) {
-  await localStorage.setItem(AUTH_TOKEN_STORAGE, token);
+   localStorage.setItem(AUTH_TOKEN_STORAGE, token);
 }
 
-export async function storageAuthTokenGet() {
-  const token = await localStorage.getItem(AUTH_TOKEN_STORAGE);
+export function storageAuthTokenGet() {
+  const token = localStorage.getItem(AUTH_TOKEN_STORAGE);
 
   return token;
 }
 
 export async function storageAuthTokenRemove() {
-  await localStorage.removeItem(AUTH_TOKEN_STORAGE);
+   localStorage.removeItem(AUTH_TOKEN_STORAGE);
 }

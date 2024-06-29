@@ -6,10 +6,9 @@ import SignUp1 from "./pages/signUp1/SignUp1";
 import SignUp2 from "./pages/signUp2/SignUp2";
 import SignUp3 from "./pages/signUp3/SignUp3";
 
-import HomeLogged from "./pages/homeLogged/HomeLogged";
 import PasswordRecovery from "./pages/passwordRecovery/PasswordRecovery";
 import Profile from "./pages/profile/Profile";
-import { VolunteerProfile } from "./pages/VolunteerProfile/VolunteerProfile";
+import { VolunteerProfile } from "./pages/volunteerProfile/VolunteerProfile";
 import ListVolunteers from "./pages/listVolunteers/ListVolunteers";
 import Error from "./pages/error/ErrorPage";
 
@@ -23,7 +22,7 @@ export default function App() {
         <Route path="/signup2" element={<SignUp2 />} />
         <Route path="/signup3" element={<SignUp3 />} />
 
-        <Route path="/homelogged" element={<HomeLogged />} />
+        <Route path="/homelogged" element={<Home />} />
         <Route path="/recovery" element={<PasswordRecovery />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/volunteer-profile" element={<VolunteerProfile />} />
