@@ -25,8 +25,6 @@ interface valuesProfile {
 }
 
 export default function Profile() {
-  const name = "Name";
-
   const profileSchemas = Yup.object().shape({
     name: Yup.string()
       .min(2, "Mínimo 2 caracteres!")
@@ -50,18 +48,18 @@ export default function Profile() {
       <Content>
         <CardForms>
           <div className="circle">
-            <p>{name.charAt(0)}</p>
+            <p>R</p>
             {/* <p>{name.charAt(0)}</p> Pegar inicial da requisição */}
           </div>
           <Formik
             // Pegar valores iniciais do back end
             initialValues={{
-              name: "",
-              lastName: "",
-              linkedIn: "",
-              discord: "",
-              ddd: "",
-              phone: "",
+              name: "Rannah",
+              lastName: "M. azevedo",
+              linkedIn: "www.linkedin.com/in/rannahmaz/",
+              discord: "Rannah#6621",
+              ddd: "+55",
+              phone: "(11) 9 4402-8922",
             }}
             validationSchema={profileSchemas}
             onSubmit={(

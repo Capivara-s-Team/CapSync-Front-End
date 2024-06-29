@@ -45,12 +45,15 @@ const fetchVolunteers = async (): Promise<ValueProfile[]> => {
 };
 
 export default function ListVolunteers() {
-  const { data: volunteerData, isLoading: isVolunteerLoading, isError: isVolunteerError, error: volunteerError } = useQuery<ValueProfile[], Error>({
+  const { data: volunteerData, isLoading: isVolunteerLoading } = useQuery<
+    ValueProfile[],
+    Error
+  >({
     queryKey: ["volunteer"],
     queryFn: fetchVolunteers,
   });
 
-  const { data: idData, isLoading: isIdLoading, isError: isIdError, error: idError } = useQuery<ValueProfile[], Error>({
+  const { isLoading: isIdLoading } = useQuery<ValueProfile[], Error>({
     queryKey: ["userId"],
     queryFn: fetchId,
   });
@@ -68,7 +71,7 @@ export default function ListVolunteers() {
         <NavbarMenuLogged />
         <Content>
           <h1>Lista de Voluntários</h1>
-  
+
           <div className="box">
             <label>Filtro</label>
             <div className="filter-input">
@@ -76,7 +79,7 @@ export default function ListVolunteers() {
               <input type="text" />
             </div>
           </div>
-  
+
           <Table>
             <div className="table">
               <p>Nome</p>
@@ -84,7 +87,7 @@ export default function ListVolunteers() {
               <p>Senioridade</p>
               <p>Status</p>
             </div>
-  
+
             {volunteerData &&
               volunteerData.map((value: ValueProfile) => (
                 <VolunteerCard
@@ -100,6 +103,4 @@ export default function ListVolunteers() {
       </Container>
     );
   }
-
-
 }
