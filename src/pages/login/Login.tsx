@@ -16,6 +16,7 @@ import { useMutation } from "@tanstack/react-query";
 
 import axios from "axios";
 import { storageAuthTokenSave } from "../../storage/storageToken";
+import { storageUserSave } from "../../storage/storageUser";
 
 interface ValuesLogin {
   email: string;
@@ -23,6 +24,7 @@ interface ValuesLogin {
 }
 
 interface responseBack {
+  id: string;
   token: string;
 }
 
@@ -44,6 +46,7 @@ export function Login() {
     },
     onSuccess: (data: responseBack) => {
       storageAuthTokenSave(data.token);
+      storageUserSave(data.id);
       navigate("/homelogged");
     },
     onError: () => alert("Senha ou email inválidos"),
