@@ -8,7 +8,7 @@ import SignUp3 from "./pages/signUp3/SignUp3";
 
 import PasswordRecovery from "./pages/passwordRecovery/PasswordRecovery";
 import Profile from "./pages/profile/Profile";
-import { VolunteerProfile } from "./pages/volunteerProfile/VolunteerProfile";
+import { VolunteerProfile } from "./pages/VolunteerProfile/VolunteerProfile";
 import ListVolunteers from "./pages/listVolunteers/ListVolunteers";
 import Error from "./pages/error/ErrorPage";
 
