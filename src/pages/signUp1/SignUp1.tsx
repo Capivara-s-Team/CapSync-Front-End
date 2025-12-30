@@ -21,7 +21,7 @@ interface valuesSingUp1 {
   surname: string;
   email: string;
   password: string;
-  rePassword?: string;
+  rePassword: string;
 }
 
 export default function SignUp1() {
@@ -154,8 +154,8 @@ export default function SignUp1() {
                         type={field.type}
                         icon={field.icon}
                       />
-                      {errors[field.id] && touched[field.id] ? (
-                        <MessageError>{errors[field.id]}</MessageError>
+                      {errors[field.id as keyof typeof errors] && touched[field.id as keyof typeof touched] ? (
+                        <MessageError>{errors[field.id as keyof typeof errors]}</MessageError>
                       ) : null}
                     </div>
                   ))}
